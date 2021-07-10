@@ -1,0 +1,22 @@
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* height: 100vh; */
+}
+
+/* .container {
+  text-align: center;
+} */
+
+input[type=text],
+input[type=password] {
+  width: 25%;
+  padding: 0.625rem 1.25rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
