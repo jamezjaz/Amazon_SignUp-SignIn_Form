@@ -38,9 +38,13 @@ const Register = () => { // eslint-disable-line
     });
   };
 
+  const handleSubmit = event => {
+    event.preventDefault();
+  };
+
   return (
     <div className={RegisterStyles.container}>
-      <form className={RegisterStyles.form}>
+      <form className={RegisterStyles.form} onSubmit={handleSubmit}>
         <h3>Create account</h3>
         <label htmlFor="name" className="text-left">
           Your Name
