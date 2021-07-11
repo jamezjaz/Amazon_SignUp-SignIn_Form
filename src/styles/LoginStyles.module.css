@@ -9,11 +9,11 @@ form {
   left: 30rem; */
   /* height: 100vh; */
 }
-
+  
 label {
   color: black;
 }
-
+  
 input[type=text],
 input[type=password] {
   width: 25%;
@@ -23,10 +23,17 @@ input[type=password] {
   border-radius: 0.25rem;
   box-sizing: border-box;
 }
-
+  
 .btn {
   color: white;
   background-color: #1981ba;
   margin: 15px 0;
-  padding: 3px 65px;
+  padding: 3px 112px;
+}
+
+.createBtn {
+  color: #3a3326;
+  background-color: #ebedf0;
+  margin: 5px 0;
+  padding: 3px 35px;
 }

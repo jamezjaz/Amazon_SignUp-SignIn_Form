@@ -61,7 +61,6 @@ const Register = props => {
   return (
     <div className={RegisterStyles.container}>
       <form className={RegisterStyles.form} onSubmit={handleSubmit}>
-        <h4>{state.name}</h4>
         <h3>Create account</h3>
         <label htmlFor="name" className="text-left">
           Your Name
@@ -119,12 +118,12 @@ const Register = props => {
           and
           <Link to="/">Privacy Notice.</Link>
         </small>
-        <div className="my-4">
+        <div className="my-3">
           <span>Already have an account? </span>
-          <Link to="/sign-in">Sign-in</Link>
+          <Link to="/login">Sign-in</Link>
         </div>
       </form>
-      <div className="mb-4">
+      <div className="mb-3">
         <Link to="/">Conditions of Use  Privacy Notice  Help</Link>
         <br />
         <small>© 1996-2021, Amazon.com, Inc. or its affiliates</small>
