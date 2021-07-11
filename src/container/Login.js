@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LoginStyles from '../styles/LoginStyles.module.css';
+import caretDown from '../assets/caret-down.svg';
 
 const Login = () => {
   const [values, setValues] = useState({
@@ -73,7 +74,11 @@ const Login = () => {
           <input type="checkbox" id="checkbox" />
           Keep me signed in.
           {' '}
-          <Link to="/">Details</Link>
+          <Link to="/">
+            Details
+            {' '}
+            <img src={caretDown} alt="caret-down" />
+          </Link>
         </label>
         <div className="my-4">
           <small>New to Amazon? </small>

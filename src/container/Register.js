@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import RegisterStyles from '../styles/RegisterStyles.module.css';
+import caretRight from '../assets/caret-right.svg';
 
 const Register = props => {
   const [state, setState] = useState({
@@ -120,7 +121,11 @@ const Register = props => {
         </small>
         <div className="my-3">
           <span>Already have an account? </span>
-          <Link to="/login">Sign-in</Link>
+          <Link to="/login">
+            Sign-in
+            {' '}
+            <img src={caretRight} alt="caret-right" />
+          </Link>
         </div>
       </form>
     </div>
