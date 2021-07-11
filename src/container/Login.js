@@ -26,6 +26,10 @@ const Login = () => {
     event.preventDefault();
     console.log(values);
     alert(`We're glad to have you on here again, ${values.email}`);
+    setValues({
+      email: '',
+      password: '',
+    });
   };
 
   return (
