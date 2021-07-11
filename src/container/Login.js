@@ -49,7 +49,7 @@ const Login = () => {
         </label>
         <label htmlFor="password">
           Password
-          <Link to="/forgotpassword">Forgot your password?</Link>
+          <Link to="/passwordreset">Forgot your password?</Link>
           <br />
           <input
             id="password"
