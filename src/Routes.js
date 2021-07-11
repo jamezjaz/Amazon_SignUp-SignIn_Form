@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Data from './components/Data';
+import Footer from './components/Footer';
 import PasswordReset from './components/PasswordReset';
 import Login from './container/Login';
 import Register from './container/Register';
@@ -13,6 +14,7 @@ const Routes = () => (
       <Route path="/login" component={Login} />
       <Route path="/passwordreset" component={PasswordReset} />
     </Switch>
+    <Footer />
   </Router>
 );
 

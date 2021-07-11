@@ -123,11 +123,6 @@ const Register = props => {
           <Link to="/login">Sign-in</Link>
         </div>
       </form>
-      <div className="mb-3">
-        <Link to="/">Conditions of Use  Privacy Notice  Help</Link>
-        <br />
-        <small>© 1996-2021, Amazon.com, Inc. or its affiliates</small>
-      </div>
     </div>
   );
 };
