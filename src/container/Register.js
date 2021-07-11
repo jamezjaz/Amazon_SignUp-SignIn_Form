@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import RegisterStyles from '../styles/RegisterStyles.module.css';
 
-const Register = () => { // eslint-disable-line
+const Register = props => {
   const [state, setState] = useState({
     name: '',
     email: '',
@@ -38,6 +39,11 @@ const Register = () => { // eslint-disable-line
     });
   };
 
+  const redirect = () => {
+    const { history } = props;
+    history.push('/data');
+  };
+
   const handleSubmit = event => {
     event.preventDefault();
     console.log(state);
@@ -49,6 +55,7 @@ const Register = () => { // eslint-disable-line
       password: '',
       confirm_password: '',
     });
+    redirect();
   };
 
   return (
@@ -124,6 +131,10 @@ const Register = () => { // eslint-disable-line
       </div>
     </div>
   );
+};
+
+Register.propTypes = {
+  history: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default Register;
