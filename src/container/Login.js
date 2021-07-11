@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import LoginStyles from '../styles/LoginStyles.module.css';
 
-const Login = () => { // eslint-disable-line
+const Login = () => {
+  const [values, setValues] = useState({
+    email: '',
+    password: '',
+  });
+
+  const handleEmailChange = event => {
+    setValues({
+      ...values,
+      email: event.target.value,
+    });
+  };
+
+  const handlePasswordChange = event => {
+    setValues({
+      ...values,
+      password: event.target.value,
+    });
+  };
+
   return (
     <div>
       <form className={LoginStyles.form}>
@@ -14,6 +33,8 @@ const Login = () => { // eslint-disable-line
             id="email"
             name="email"
             type="text"
+            value={values.email}
+            onChange={handleEmailChange}
           />
         </label>
         <label htmlFor="password">
@@ -24,10 +45,12 @@ const Login = () => { // eslint-disable-line
             id="password"
             name="password"
             type="password"
+            value={values.password}
+            onChange={handlePasswordChange}
           />
         </label>
         <div>
-          <button type="submit" className={`${LoginStyles.btn} btn`}>Sign-In</button>
+          <button type="submit" className={`${LoginStyles.btn} btn text-white`}>Sign-In</button>
         </div>
         <small>
           By continuing, you agree to Amazon&apos;s
