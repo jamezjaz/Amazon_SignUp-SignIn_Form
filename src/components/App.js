@@ -1,11 +1,12 @@
-import Register from '../container/Register';
+import Routes from '../Routes';
 import '../styles/App.css';
+import logo from '../assets/amazon.png';
 
 function App() {
   return (
     <div className="App">
-      <h2>Amazon</h2>
-      <Register />
+      <img src={logo} alt="logo" className="my-3" />
+      <Routes />
     </div>
   );
 }

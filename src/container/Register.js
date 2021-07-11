@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import RegisterStyles from '../styles/RegisterStyles.module.css';
 
 const Register = () => { // eslint-disable-line
@@ -47,12 +48,25 @@ const Register = () => { // eslint-disable-line
           />
         </label>
         <div>
-          <button type="submit" className="btn btn-primary">Create your Amazon account</button>
+          <button type="submit" className={`${RegisterStyles.btn} btn`}>Create your Amazon account</button>
         </div>
         <small>
-          By creating an account, you agree to Amazon&apos;s Conditions of Use and Privacy Notice.
+          By creating an account, you agree to Amazon&apos;s
+          <br />
+          <Link to="/">Conditions of Use</Link>
+          and
+          <Link to="/">Privacy Notice.</Link>
         </small>
+        <div className="my-4">
+          <span>Already have an account? </span>
+          <Link to="/sign-in">Sign-in</Link>
+        </div>
       </form>
+      <div>
+        <Link to="/">Conditions of Use  Privacy Notice  Help</Link>
+        <br />
+        <small>© 1996-2021, Amazon.com, Inc. or its affiliates</small>
+      </div>
     </div>
   );
 };
