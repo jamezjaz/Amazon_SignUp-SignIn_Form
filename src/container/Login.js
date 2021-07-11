@@ -22,9 +22,15 @@ const Login = () => {
     });
   };
 
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log(values);
+    alert(`We're glad to have you on here again, ${values.email}`);
+  };
+
   return (
     <div>
-      <form className={LoginStyles.form}>
+      <form className={LoginStyles.form} onSubmit={handleSubmit}>
         <h3>Sign-In</h3>
         <label htmlFor="email">
           Email or mobile phone number
@@ -62,6 +68,7 @@ const Login = () => {
         <label htmlFor="checkbox">
           <input type="checkbox" id="checkbox" />
           Keep me signed in.
+          {' '}
           <Link to="/">Details</Link>
         </label>
         <div className="my-4">
