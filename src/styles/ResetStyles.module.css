@@ -1,3 +1,14 @@
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  width: 350px;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -11,7 +22,8 @@ label {
 }
     
 input[type=text] {
-  width: 25%;
+  width: 313px;
+  height: 30px;
   padding: 0.3rem 1rem;
   margin: 0.5rem 0;
   border: 1px solid #ccc;
@@ -23,5 +35,5 @@ input[type=text] {
   color: white;
   background-color: #1981ba;
   margin: 15px 0;
-  padding: 3px 105px;
+  padding: 3px 122px;
 }

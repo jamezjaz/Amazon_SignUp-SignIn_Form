@@ -1,7 +1,18 @@
-form {
+.container {
+  width: 100vw;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  width: 350px;
+}
+
+form {
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-start; */
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -12,7 +23,8 @@ label {
 
 input[type=text],
 input[type=password] {
-  width: 25%;
+  width: 313px;
+  height: 30px;
   padding: 0.3rem 1rem;
   margin: 0.5rem 0;
   border: 1px solid #ccc;
@@ -24,5 +36,5 @@ input[type=password] {
   color: white;
   background-color: #1981ba;
   margin: 15px 0;
-  padding: 3px 65px;
+  padding: 3px 51px;
 }
