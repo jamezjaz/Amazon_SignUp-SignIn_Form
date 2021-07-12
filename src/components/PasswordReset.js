@@ -12,29 +12,28 @@ const PasswordReset = () => (
           <br />
           associated with your Amazon account.
         </small>
-        <label htmlFor="email">
-          Email or mobile phone number
-          <br />
+        <div className={ResetStyles.formLabel}>
+          <p>Email or mobile phone number</p>
           <input
             id="email"
             name="email"
             type="text"
           />
-        </label>
+        </div>
         <div>
           <button type="submit" className={`${ResetStyles.btn} btn text-white`}>Continue</button>
         </div>
       </form>
-      <span>Has your email or mobile number changed?</span>
-      <small>
-        If you no longer use the email address associated with your
+      <div className="text-start my-3">
+        <span>Has your email or mobile number changed?</span>
         <br />
-        Amazon account, you may contact
-        <Link to="/">Customer Service</Link>
-        for
-        <br />
-        help restoring access to your account.
-      </small>
+        <small>
+          If you no longer use the email address associated with your
+          Amazon account, you may contact
+          <Link to="/">Customer Service</Link>
+          for help restoring access to your account.
+        </small>
+      </div>
     </div>
   </div>
 );

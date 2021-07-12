@@ -13,40 +13,34 @@ const Register = () => {
     confirm_password: '',
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleNameChange = event => {
     setState({
       ...state,
       name: event.target.value,
     });
   };
-
   const handleEmailChange = event => {
     setState({
       ...state,
       email: event.target.value,
     });
   };
-
   const handlePasswordChange = event => {
     setState({
       ...state,
       password: event.target.value,
     });
   };
-
   const handleConfirmPasswordChange = event => {
     setState({
       ...state,
       confirm_password: event.target.value,
     });
   };
-
   // const redirect = () => {
   //   const { history } = props;
   //   history.push('/data');
   // };
-
   const handleSubmit = event => {
     event.preventDefault();
     console.log(state);
@@ -55,7 +49,6 @@ const Register = () => {
     setIsSubmitted(true);
     // redirect();
   };
-
   return (
     <div className={RegisterStyles.container}>
       {
@@ -64,31 +57,26 @@ const Register = () => {
             <div className={RegisterStyles.formContainer}>
               <form onSubmit={handleSubmit}>
                 <h3>Create account</h3>
-                <label htmlFor="name">
-                  Your Name
-                  <br />
+                <div className={RegisterStyles.formLabel}>
+                  <p>Your name</p>
                   <input
-                    id="name"
                     name="name"
                     type="text"
                     value={state.name}
                     onChange={handleNameChange}
                   />
-                </label>
-                <label htmlFor="email">
-                  Email
-                  <br />
+                </div>
+                <div className={RegisterStyles.formLabel}>
+                  <p>Email</p>
                   <input
-                    id="email"
                     name="email"
                     type="text"
                     value={state.email}
                     onChange={handleEmailChange}
                   />
-                </label>
-                <label htmlFor="password">
-                  Password
-                  <br />
+                </div>
+                <div className={RegisterStyles.formLabel}>
+                  <p>Password</p>
                   <input
                     id="password"
                     name="password"
@@ -97,11 +85,10 @@ const Register = () => {
                     value={state.password}
                     onChange={handlePasswordChange}
                   />
-                </label>
-                <small>Passwords must be at least 6 characters.</small>
-                <label htmlFor="conf-password">
-                  Re-enter password
-                  <br />
+                </div>
+                <small className="text-start px-3">Passwords must be at least 6 characters.</small>
+                <div className={RegisterStyles.formLabel}>
+                  <p>Re-enter password</p>
                   <input
                     id="conf-password"
                     name="conf-password"
@@ -109,18 +96,18 @@ const Register = () => {
                     value={state.confirm_password}
                     onChange={handleConfirmPasswordChange}
                   />
-                </label>
+                </div>
                 <div>
                   <button type="submit" className={`${RegisterStyles.btn} btn`}>Create your Amazon account</button>
                 </div>
-                <small>
+                <small className="text-start px-3">
                   By creating an account, you agree to Amazon&apos;s
                   <br />
                   <Link to="/">Conditions of Use</Link>
                   and
                   <Link to="/">Privacy Notice.</Link>
                 </small>
-                <div className="my-3">
+                <div className="text-start px-3 my-3">
                   <span>Already have an account? </span>
                   <Link to="/login">
                     Sign-in
@@ -142,9 +129,7 @@ const Register = () => {
     </div>
   );
 };
-
 // Register.propTypes = {
 //   history: PropTypes.instanceOf(Object).isRequired,
 // };
-
 export default Register;

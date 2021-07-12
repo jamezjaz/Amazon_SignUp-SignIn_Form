@@ -38,9 +38,8 @@ const Login = () => {
       <div className={LoginStyles.formContainer}>
         <form className={LoginStyles.form} onSubmit={handleSubmit}>
           <h3>Sign-In</h3>
-          <label htmlFor="email">
-            Email or mobile phone number
-            <br />
+          <div className={LoginStyles.formLabel}>
+            <p>Email or mobile phone number</p>
             <input
               id="email"
               name="email"
@@ -48,11 +47,12 @@ const Login = () => {
               value={values.email}
               onChange={handleEmailChange}
             />
-          </label>
-          <label htmlFor="password">
-            Password
-            <Link to="/passwordreset">Forgot your password?</Link>
-            <br />
+          </div>
+          <div className={LoginStyles.formLabel}>
+            <p className="d-flex justify-content-between">
+              Password
+              <Link to="/passwordreset" style={{ textDecoration: 'none' }}>Forgot your password?</Link>
+            </p>
             <input
               id="password"
               name="password"
@@ -60,18 +60,17 @@ const Login = () => {
               value={values.password}
               onChange={handlePasswordChange}
             />
-          </label>
+          </div>
           <div>
             <button type="submit" className={`${LoginStyles.btn} btn text-white`}>Sign-In</button>
           </div>
-          <small>
+          <small className="text-start px-3">
             By continuing, you agree to Amazon&apos;s
-            <br />
             <Link to="/">Conditions of Use</Link>
             and
             <Link to="/">Privacy Notice.</Link>
           </small>
-          <label htmlFor="checkbox">
+          <label htmlFor="checkbox" className="text-start px-3 pt-2">
             <input type="checkbox" id="checkbox" />
             Keep me signed in.
             {' '}
