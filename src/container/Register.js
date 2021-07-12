@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import PropTypes from 'prop-types';
 import RegisterStyles from '../styles/RegisterStyles.module.css';
 import caretRight from '../assets/caret-right.svg';
 import Data from '../components/Data';
@@ -37,17 +36,12 @@ const Register = () => {
       confirm_password: event.target.value,
     });
   };
-  // const redirect = () => {
-  //   const { history } = props;
-  //   history.push('/data');
-  // };
+
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(state);
-    // alert(`${state.name} ${state.email} ${state.password}`);
-    alert(`Welcome ${state.name}!`);
+    // console.log(state);
+    // alert(`Welcome ${state.name}!`);
     setIsSubmitted(true);
-    // redirect();
   };
   return (
     <div className={RegisterStyles.container}>
@@ -129,7 +123,5 @@ const Register = () => {
     </div>
   );
 };
-// Register.propTypes = {
-//   history: PropTypes.instanceOf(Object).isRequired,
-// };
+
 export default Register;

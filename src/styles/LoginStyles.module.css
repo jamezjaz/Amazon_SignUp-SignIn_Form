@@ -22,12 +22,13 @@ form {
   padding: 0 5%;
   text-align: left;
 }
-.formLabel > p{
+
+.formLabel > p {
   margin-bottom: 2px;
   line-height: 0;
   color: black;
 }
-  
+
 input[type=text],
 input[type=password] {
   width: 313px;
@@ -38,7 +39,7 @@ input[type=password] {
   border-radius: 0.25rem;
   box-sizing: border-box;
 }
-  
+
 .btn {
   color: white;
   background-color: #1981ba;

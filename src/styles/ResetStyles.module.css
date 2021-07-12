@@ -16,18 +16,19 @@ form {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-    
+
 .formLabel {
   margin-top: 20px;
   padding: 0 5%;
   text-align: left;
 }
-.formLabel > p{
+
+.formLabel > p {
   margin-bottom: 2px;
   line-height: 0;
   color: black;
 }
-    
+
 input[type=text] {
   width: 313px;
   height: 30px;
@@ -37,7 +38,7 @@ input[type=text] {
   border-radius: 0.25rem;
   box-sizing: border-box;
 }
-    
+
 .btn {
   color: white;
   background-color: #1981ba;
