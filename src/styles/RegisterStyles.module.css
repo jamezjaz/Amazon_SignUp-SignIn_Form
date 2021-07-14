@@ -1,0 +1,45 @@
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  width: 350px;
+}
+
+form {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.formLabel {
+  margin-top: 20px;
+  padding: 0 5%;
+  text-align: left;
+}
+
+.formLabel > p {
+  margin-bottom: 2px;
+  line-height: 0;
+  color: black;
+}
+
+input[type=text],
+input[type=password] {
+  width: 313px;
+  height: 30px;
+  padding: 0.3rem 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+}
+
+.btn {
+  color: white;
+  background-color: #1981ba;
+  margin: 15px 0;
+  padding: 3px 51px;
+}
