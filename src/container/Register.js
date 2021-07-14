@@ -5,36 +5,22 @@ import caretRight from '../assets/caret-right.svg';
 import Data from '../components/Data';
 
 const Register = () => {
-  const [state, setState] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirm_password: '',
-  });
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const handleNameChange = event => {
-    setState({
-      ...state,
-      name: event.target.value,
-    });
-  };
-  const handleEmailChange = event => {
-    setState({
-      ...state,
-      email: event.target.value,
-    });
-  };
-  const handlePasswordChange = event => {
-    setState({
-      ...state,
-      password: event.target.value,
-    });
-  };
-  const handleConfirmPasswordChange = event => {
-    setState({
-      ...state,
-      confirm_password: event.target.value,
-    });
+
+  const handleChange = event => {
+    if (event.target.name === 'name') {
+      setName(event.target.value);
+    } else if (event.target.name === 'email') {
+      setEmail(event.target.value);
+    } else if (event.target.name === 'password') {
+      setPassword(event.target.value);
+    } else {
+      setConfirmPassword(event.target.value);
+    }
   };
 
   const handleSubmit = event => {
@@ -56,8 +42,8 @@ const Register = () => {
                   <input
                     name="name"
                     type="text"
-                    value={state.name}
-                    onChange={handleNameChange}
+                    value={name}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className={RegisterStyles.formLabel}>
@@ -65,8 +51,8 @@ const Register = () => {
                   <input
                     name="email"
                     type="text"
-                    value={state.email}
-                    onChange={handleEmailChange}
+                    value={email}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className={RegisterStyles.formLabel}>
@@ -76,8 +62,8 @@ const Register = () => {
                     name="password"
                     type="password"
                     placeholder="At least 6 characters"
-                    value={state.password}
-                    onChange={handlePasswordChange}
+                    value={password}
+                    onChange={handleChange}
                   />
                 </div>
                 <small className="text-start px-3">Passwords must be at least 6 characters.</small>
@@ -87,8 +73,8 @@ const Register = () => {
                     id="conf-password"
                     name="conf-password"
                     type="password"
-                    value={state.confirm_password}
-                    onChange={handleConfirmPasswordChange}
+                    value={confirmPassword}
+                    onChange={handleChange}
                   />
                 </div>
                 <div>
@@ -114,9 +100,9 @@ const Register = () => {
           )
           : (
             <Data
-              name={state.name}
-              email={state.email}
-              password={state.password}
+              name={name}
+              email={email}
+              password={password}
             />
           )
       }

@@ -4,33 +4,21 @@ import LoginStyles from '../styles/LoginStyles.module.css';
 import caretDown from '../assets/caret-down.svg';
 
 const Login = () => {
-  const [values, setValues] = useState({
-    email: '',
-    password: '',
-  });
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  const handleEmailChange = event => {
-    setValues({
-      ...values,
-      email: event.target.value,
-    });
-  };
-
-  const handlePasswordChange = event => {
-    setValues({
-      ...values,
-      password: event.target.value,
-    });
+  const handleChange = event => {
+    if (event.target.name === 'email') {
+      setEmail(event.target.value);
+    } else {
+      setPassword(event.target.value);
+    }
   };
 
   const handleSubmit = event => {
     event.preventDefault();
-    // console.log(values);
-    // alert(`We're glad to have you on here again, ${values.email}`);
-    setValues({
-      email: '',
-      password: '',
-    });
+    // console.log(email);
+    // alert(`We're glad to have you on here again, ${email}`);
   };
 
   return (
@@ -44,8 +32,8 @@ const Login = () => {
               id="email"
               name="email"
               type="text"
-              value={values.email}
-              onChange={handleEmailChange}
+              value={email}
+              onChange={handleChange}
             />
           </div>
           <div className={LoginStyles.formLabel}>
@@ -57,8 +45,8 @@ const Login = () => {
               id="password"
               name="password"
               type="password"
-              value={values.password}
-              onChange={handlePasswordChange}
+              value={password}
+              onChange={handleChange}
             />
           </div>
           <div>
